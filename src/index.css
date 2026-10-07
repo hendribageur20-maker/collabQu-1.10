@@ -1,0 +1,213 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* ========================================================
+   THEME STYLES (Bright, Emerald, Dark, Neon, Blue, Red)
+   ======================================================== */
+
+/* 1. DARK / MIDNIGHT OLED */
+[data-theme="dark"] {
+  background-color: #060b18 !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: #0f182e !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .bg-slate-50,
+[data-theme="dark"] .bg-slate-100 {
+  background-color: #172342 !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .border-slate-200,
+[data-theme="dark"] .border-slate-300 {
+  border-color: #27375c !important;
+}
+
+[data-theme="dark"] .text-slate-950,
+[data-theme="dark"] .text-slate-900,
+[data-theme="dark"] .text-slate-800 {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .text-slate-700,
+[data-theme="dark"] .text-slate-600,
+[data-theme="dark"] .text-slate-500 {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] header,
+[data-theme="dark"] nav {
+  background-color: rgba(15, 24, 46, 0.95) !important;
+  border-color: #27375c !important;
+}
+
+/* 2. NEON CYBER GLOW */
+[data-theme="neon"] {
+  background-color: #03060f !important;
+  color: #e0f2fe !important;
+}
+
+[data-theme="neon"] .bg-white {
+  background-color: #080f24 !important;
+  border-color: #06b6d4 !important;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.15) !important;
+  color: #f0fdf4 !important;
+}
+
+[data-theme="neon"] .bg-slate-50,
+[data-theme="neon"] .bg-slate-100 {
+  background-color: #0c183a !important;
+  color: #67e8f9 !important;
+}
+
+[data-theme="neon"] .border-slate-200,
+[data-theme="neon"] .border-slate-300 {
+  border-color: rgba(6, 182, 212, 0.45) !important;
+}
+
+[data-theme="neon"] .text-slate-950,
+[data-theme="neon"] .text-slate-900,
+[data-theme="neon"] .text-slate-800 {
+  color: #ecfeff !important;
+}
+
+[data-theme="neon"] .text-slate-700,
+[data-theme="neon"] .text-slate-600 {
+  color: #a5f3fc !important;
+}
+
+[data-theme="neon"] .bg-emerald-700,
+[data-theme="neon"] .bg-emerald-800 {
+  background-color: #00e599 !important;
+  color: #022c22 !important;
+  box-shadow: 0 0 15px rgba(0, 229, 153, 0.4) !important;
+}
+
+[data-theme="neon"] header,
+[data-theme="neon"] nav {
+  background-color: rgba(8, 15, 36, 0.95) !important;
+  border-color: #06b6d4 !important;
+}
+
+/* 3. EMERALD / HIJAU ZAMRUD */
+[data-theme="emerald"] {
+  background-color: #f0fdf4 !important;
+}
+
+[data-theme="emerald"] .border-slate-200,
+[data-theme="emerald"] .border-slate-300 {
+  border-color: #a7f3d0 !important;
+}
+
+[data-theme="emerald"] .bg-slate-100 {
+  background-color: #e6fced !important;
+}
+
+/* 4. BLUE / OCEAN SAPPHIRE */
+[data-theme="blue"] {
+  background-color: #f0f7ff !important;
+}
+
+[data-theme="blue"] .border-slate-200,
+[data-theme="blue"] .border-slate-300 {
+  border-color: #bfdbfe !important;
+}
+
+[data-theme="blue"] .bg-slate-100 {
+  background-color: #e0f0fe !important;
+}
+
+[data-theme="blue"] .bg-emerald-700,
+[data-theme="blue"] .bg-emerald-800 {
+  background-color: #1d4ed8 !important;
+  border-color: #1e40af !important;
+}
+
+[data-theme="blue"] .text-emerald-800,
+[data-theme="blue"] .text-emerald-900 {
+  color: #1e40af !important;
+}
+
+/* 5. RED / ROYAL RUBY */
+[data-theme="red"] {
+  background-color: #fff1f2 !important;
+}
+
+[data-theme="red"] .border-slate-200,
+[data-theme="red"] .border-slate-300 {
+  border-color: #fecaca !important;
+}
+
+[data-theme="red"] .bg-slate-100 {
+  background-color: #fee2e2 !important;
+}
+
+[data-theme="red"] .bg-emerald-700,
+[data-theme="red"] .bg-emerald-800 {
+  background-color: #dc2626 !important;
+  border-color: #b91c1c !important;
+}
+
+[data-theme="red"] .text-emerald-800,
+[data-theme="red"] .text-emerald-900 {
+  color: #991b1b !important;
+}
+
+/* 6. BRIGHT (OUTDOOR SIANG) */
+[data-theme="bright"] {
+  background-color: #f1f5f9 !important;
+}
+
+/* Custom Print Rules for Invoices */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+
+  .invoice-printable {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+@media screen {
+  .print-only {
+    display: none !important;
+  }
+}
+
+/* Safe area support for iOS home indicator and notch */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0.5rem);
+}

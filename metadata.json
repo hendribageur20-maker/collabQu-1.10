@@ -1,0 +1,6 @@
+{
+  "name": "Collab Qu 1.20 - Solusi Modern Sistem Titip Jual",
+  "description": "Aplikasi mobile-first manajemen usaha titip jual (consignment) ke banyak toko lengkap dengan GPS, Invoice, WhatsApp, Laporan Omset & Stok.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
